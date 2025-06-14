@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FreelancePro | منصة الأعمال الحرة</title>
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #1f2937;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #38bdf8, #3b82f6);
+      color: white;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    .hero .buttons {
+      margin-top: 2rem;
+    }
+
+    .btn {
+      background-color: white;
+      color: #2563eb;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      margin: 0 0.5rem;
+      display: inline-block;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #e2e8f0;
+    }
+
+    section {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .steps {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .step {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      width: 250px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .services-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .service {
+      background: #f1f5f9;
+      padding: 1.5rem;
+      border-radius: 12px;
+      width: 250px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    footer {
+      background-color: #1f2937;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- الهيدر -->
+  <header>
+    <div class="logo">FreelancePro</div>
+    <nav>
+      <ul>
+        <li><a href="#">الرئيسية</a></li>
+        <li><a href="#how">كيف يعمل</a></li>
+        <li><a href="#services">الخدمات</a></li>
+        <li><a href="#signup">سجل كمستقل</a></li>
+        <li><a href="#">دخول</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- القسم التعريفي -->
+  <section class="hero">
+    <h1>اكتشف أفضل المستقلين في العالم العربي</h1>
+    <p>وظف محترفين أو اعرض خدماتك وابدأ رحلة عمل حر ناجحة.</p>
+    <div class="buttons">
+      <a href="#services" class="btn">استعرض الخدمات</a>
+      <a href="#signup" class="btn">سجّل كمستقل</a>
+    </div>
+  </section>
+
+  <!-- كيف يعمل الموقع -->
+  <section id="how">
+    <h2>كيف يعمل FreelancePro؟</h2>
+    <div class="steps">
+      <div class="step">
+        <h3>١. ابحث</h3>
+        <p>تصفح الخدمات أو اطلب ما تحتاجه مباشرة.</p>
+      </div>
+      <div class="step">
+        <h3>٢. اختر</h3>
+        <p>اختر المستقل الأنسب لاحتياجك.</p>
+      </div>
+      <div class="step">
+        <h3>٣. اطلق المشروع</h3>
+        <p>تابع التنفيذ وتواصل بأمان حتى الإنجاز.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- الخدمات -->
+  <section id="services">
+    <h2>الخدمات الشائعة</h2>
+    <div class="services-grid">
+      <div class="service">
+        <h3>تصميم جرافيك</h3>
+        <p>شعارات وهويات بصرية متميزة.</p>
+      </div>
+      <div class="service">
+        <h3>تطوير الويب</h3>
+        <p>مواقع احترافية بلغات وتقنيات حديثة.</p>
+      </div>
+      <div class="service">
+        <h3>كتابة وترجمة</h3>
+        <p>محتوى احترافي بجودة لغوية عالية.</p>
+      </div>
+      <div class="service">
+        <h3>التسويق الرقمي</h3>
+        <p>إعلانات، سوشال ميديا، وتحسين ظهورك.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- التسجيل كمستقل -->
+  <section id="signup">
+    <h2>هل أنت مستقل؟</h2>
+    <p>انضم الآن وابدأ في تقديم خدماتك وتحقيق دخل من مهاراتك.</p>
+    <a href="#" class="btn">ابدأ الآن</a>
+  </section>
+
+  <!-- الفوتر -->
+  <footer>
+    <p>© 2025 FreelancePro - جميع الحقوق محفوظة.</p>
+  </footer>
+
+</body>
+</html>
