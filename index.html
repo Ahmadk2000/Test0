@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>FreelancePro | منصة الأعمال الحرة</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Cairo', sans-serif;
       margin: 0;
@@ -20,11 +24,17 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative;
     }
 
     .logo {
       font-size: 1.5rem;
       font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
     }
 
     nav ul {
@@ -43,6 +53,41 @@
 
     nav a:hover {
       color: #38bdf8;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      background: white;
+      height: 3px;
+      width: 25px;
+      margin: 4px 0;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #1f2937;
+        width: 100%;
+        display: none;
+        padding: 1rem;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
     }
 
     .hero {
@@ -71,9 +116,9 @@
       padding: 0.75rem 1.5rem;
       border-radius: 8px;
       text-decoration: none;
-      margin: 0 0.5rem;
-      display: inline-block;
+      margin: 0.5rem;
       font-weight: bold;
+      display: inline-block;
       transition: background-color 0.3s;
     }
 
@@ -86,35 +131,21 @@
       text-align: center;
     }
 
-    .steps {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-    }
-
-    .step {
-      background: #fff;
-      padding: 1.5rem;
-      border-radius: 12px;
-      width: 250px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
+    .steps,
     .services-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 2rem;
-      margin-top: 2rem;
     }
 
+    .step,
     .service {
-      background: #f1f5f9;
+      background: #fff;
       padding: 1.5rem;
       border-radius: 12px;
       width: 250px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     footer {
@@ -130,8 +161,13 @@
   <!-- الهيدر -->
   <header>
     <div class="logo">FreelancePro</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <nav>
-      <ul>
+      <ul id="menu">
         <li><a href="#">الرئيسية</a></li>
         <li><a href="#how">كيف يعمل</a></li>
         <li><a href="#services">الخدمات</a></li>
@@ -204,6 +240,13 @@
   <footer>
     <p>© 2025 FreelancePro - جميع الحقوق محفوظة.</p>
   </footer>
+
+  <!-- القائمة المنسدلة -->
+  <script>
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('show');
+    }
+  </script>
 
 </body>
 </html>
